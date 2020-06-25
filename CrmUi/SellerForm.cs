@@ -20,12 +20,16 @@ namespace CrmUi
             InitializeComponent();
         }
 
+        public SellerForm(Seller seller) : this()
+        {
+            Seller = seller;
+            sellerNameTextBox.Text = seller.Name;
+        }
+
         private void sellerInputButton_Click(object sender, EventArgs e)
         {
-            Seller = new Seller()
-            {
-                Name = sellerNameTextBox.Text
-            };
+            var s = Seller ?? new Seller();
+            s.Name = sellerNameTextBox.Text;
             Close();
         }
     }

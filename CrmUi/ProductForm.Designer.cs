@@ -98,6 +98,11 @@
             this.countNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.countNumericUpDown.Location = new System.Drawing.Point(152, 84);
+            this.countNumericUpDown.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.countNumericUpDown.Name = "countNumericUpDown";
             this.countNumericUpDown.Size = new System.Drawing.Size(134, 22);
             this.countNumericUpDown.TabIndex = 5;
