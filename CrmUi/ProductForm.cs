@@ -22,7 +22,7 @@ namespace CrmUi
 
         public ProductForm(Product product) : this()
         {
-            Product = product;
+            Product = product ?? new Product();
             productNameTextBox.Text = Product.Name;
             priceNumericUpDown.Value = Product.Price;
             countNumericUpDown.Value = Product.Count;
@@ -30,10 +30,10 @@ namespace CrmUi
 
         private void productInputButton_Click(object sender, EventArgs e)
         {
-            var p = Product ?? new Product();
-            p.Name = productNameTextBox.Text;
-            p.Price = priceNumericUpDown.Value;
-            p.Count = Convert.ToInt32(countNumericUpDown.Value);
+            Product = Product ?? new Product();
+            Product.Name = productNameTextBox.Text;
+            Product.Price = priceNumericUpDown.Value;
+            Product.Count = Convert.ToInt32(countNumericUpDown.Value);
             
             Close();
         }
