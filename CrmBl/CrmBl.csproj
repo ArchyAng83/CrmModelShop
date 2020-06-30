@@ -117,6 +117,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202006301458088_update180419.cs" />
+    <Compile Include="Migrations\202006301458088_update180419.Designer.cs">
+      <DependentUpon>202006301458088_update180419.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Cart.cs" />
     <Compile Include="Model\CashDesk.cs" />
@@ -133,6 +137,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202006301458088_update180419.resx">
+      <DependentUpon>202006301458088_update180419.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

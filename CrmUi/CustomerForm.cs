@@ -22,14 +22,14 @@ namespace CrmUi
 
         public CustomerForm(Customer customer) : this()
         {
-            Customer = customer;
+            Customer = customer ?? new Customer();
             customerNameTextBox.Text = customer.Name;
         }
 
         private void customerInputButton_Click(object sender, EventArgs e)
         {
-            var c = Customer ?? new Customer();
-            c.Name = customerNameTextBox.Text;
+            Customer = Customer ?? new Customer();
+            Customer.Name = customerNameTextBox.Text;
             Close();
         }
     }
